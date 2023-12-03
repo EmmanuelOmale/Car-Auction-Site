@@ -9,5 +9,5 @@ public class AuctionDbContext : DbContext
     {
     }
 
-    public DbSet<Auction> MyProperty { get; set; }
+    public DbSet<Auction> Auctions { get; set; }
 }
