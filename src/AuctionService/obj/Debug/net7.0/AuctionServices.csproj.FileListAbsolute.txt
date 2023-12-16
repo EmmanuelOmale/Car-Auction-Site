@@ -1,0 +1,7 @@
+C:\Users\HP\Desktop\Work & Study\DEMO\Carsties\src\AuctionService\obj\Debug\net7.0\AuctionServices.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Work & Study\DEMO\Carsties\src\AuctionService\obj\Debug\net7.0\AuctionServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Work & Study\DEMO\Carsties\src\AuctionService\obj\Debug\net7.0\AuctionServices.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Work & Study\DEMO\Carsties\src\AuctionService\obj\Debug\net7.0\AuctionServices.AssemblyInfo.cs
+C:\Users\HP\Desktop\Work & Study\DEMO\Carsties\src\AuctionService\obj\Debug\net7.0\AuctionServices.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Work & Study\DEMO\Carsties\src\AuctionService\obj\Debug\net7.0\AuctionServices.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Desktop\Work & Study\DEMO\Carsties\src\AuctionService\obj\Debug\net7.0\AuctionServices.MvcApplicationPartsAssemblyInfo.cache
