@@ -30,9 +30,9 @@ public class AuctionServices : IAuctionService
         //return CreatedAtAction(nameof(GetAuctionByIdAsync))
     }
 
-    public Task DeleteAuctionAsync(Auction auction)
+    public async Task DeleteAuctionAsync(Auction auction)
     {
-        _auctionRepository.DeleteAuctionAsync(auction);
+        await _auctionRepository.DeleteAuctionAsync(auction);
     }
 
     public async Task<List<AuctionDto>> GetAllAuctionsAsync()
