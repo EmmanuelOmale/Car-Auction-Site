@@ -29,7 +29,7 @@ try
 } 
 catch(Exception e) 
 {
-    Console.WriteLine(e);
+    Console.WriteLine($"An error occurred: {e}");
 }
 
 app.Run();
