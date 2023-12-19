@@ -21,14 +21,13 @@ public class DbInitializer
 
         using var scope = app.Services.CreateScope();
 
-        var httpClient = scope.ServiceProvider.GetRequiredService<AuctionSvcHttpClient>();
+        var httpClient = scope.ServiceProvider.GetRequiredService<AuctionSVCHttpClient>();
 
         var items = await httpClient.GetItemsFormSearchDB();
 
         Console.WriteLine(items.Count + " returned from auction service");
 
         if (items.Count > 0) await DB.SaveAsync(items);
-
         // if (count == 0)
         // {
         //     Console.WriteLine("No data - attempting to seed data");
