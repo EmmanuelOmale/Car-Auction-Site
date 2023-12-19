@@ -35,9 +35,9 @@ public class AuctionServices : IAuctionService
         await _auctionRepository.DeleteAuctionAsync(auction);
     }
 
-    public async Task<List<AuctionDto>> GetAllAuctionsAsync()
+    public async Task<List<AuctionDto>> GetAllAuctionsAsync(string date)
     {
-        var auctions = await _auctionRepository.GetAllAuctionsAsync();
+        var auctions = await _auctionRepository.GetAllAuctionsAsync(date);
         return _mapper.Map<List<AuctionDto>>(auctions);
     }
 

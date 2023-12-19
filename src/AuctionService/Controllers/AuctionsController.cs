@@ -22,9 +22,9 @@ public class AuctionsController : ControllerBase
     } 
 
     [HttpGet]
-    public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions()
+    public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions(string date)
     {
-       return await _auctionService.GetAllAuctionsAsync();
+       return await _auctionService.GetAllAuctionsAsync(date);
     }
 
     [HttpGet("{id}")]
@@ -70,6 +70,7 @@ public class AuctionsController : ControllerBase
             return StatusCode(500, $"Internal Server Error: {ex.Message}");
         }
        // var auctionItem = await _auctionService.GetAuctionByIdAsync(id);
+       // TODO: Update endpoints not working.
     }
 
     [HttpDelete("{id}")]
