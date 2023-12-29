@@ -11,4 +11,5 @@ public interface IAuctionService
     Task<ActionResult<AuctionDto>> CreateAuction(CreateAuctionDto auctionDto);
     Task DeleteAuctionAsync(Auction auction);
     Task<Auction> FindAuctionAsync(Guid id);
+    Task<bool> SaveChangesAsync();
 }

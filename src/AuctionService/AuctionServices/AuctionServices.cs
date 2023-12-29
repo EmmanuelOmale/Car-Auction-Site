@@ -20,10 +20,10 @@ public class AuctionServices : IAuctionService
         var newAuction = _mapper.Map<Auction>(auctionDto);
         newAuction.Seller = "Zest";
         var createdAuction = await _auctionRepository.CreateNewAuctionAsync(newAuction);
-        var saveChangesResult = await _auctionRepository.SaveChangesAsync();
+        // var saveChangesResult = await _auctionRepository.SaveChangesAsync();
 
-        if (!saveChangesResult)
-            return new BadRequestObjectResult("Failed to save changes to DB");
+        // if (!saveChangesResult)
+        //     return new BadRequestObjectResult("Failed to save changes to DB");
 
         var auctionDtoResult = _mapper.Map<AuctionDto>(createdAuction);
         return auctionDtoResult;
@@ -49,5 +49,10 @@ public class AuctionServices : IAuctionService
     public async Task<Auction> FindAuctionAsync(Guid id)
     {
         return await _auctionRepository.FindAuctionAsync(id);
+    }
+
+    public Task<bool> SaveChangesAsync()
+    {
+        return _auctionRepository.SaveChangesAsync();
     }
 }

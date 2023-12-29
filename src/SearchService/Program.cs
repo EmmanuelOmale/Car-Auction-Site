@@ -11,10 +11,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddHttpClient<AuctionSVCHttpClient>().AddPolicyHandler(GetPolicy());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddMassTransit(x => 
 {
+    x.AddConsumersFromNamespaceContaining<AuctionCreatedConsumer>();
+    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("search", false));
+
     x.UsingRabbitMq((context, cfg) =>
     {
         cfg.ConfigureEndpoints(context);
@@ -23,7 +27,7 @@ builder.Services.AddMassTransit(x =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline. 
 
 app.UseAuthorization();
 
